@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.5.2",
+    "prisma": "^5.19.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.0"
+  },
+  "scripts": {
+    "build": "npm install && tsc",
+    "start": "tsc && node dist/generator.js"
+  }
+}

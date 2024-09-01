@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  mysql:
+    build: .
+    container_name: mysql-testdb
+    env_file:
+      - .env
+    hostname: ${DB_HOST}
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - "${DB_PORT}:3306"
