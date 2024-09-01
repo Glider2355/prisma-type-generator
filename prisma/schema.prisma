@@ -1,6 +1,5 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "./generated/client"
 }
 
 datasource db {
@@ -14,4 +13,10 @@ model Users {
   nameKanji   String?   @db.VarChar(34)
   nameKana    String?   @db.VarChar(50)
   dateOfBirth DateTime? @db.Date
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model user_relations {
+  id     BigInt @id
+  userId Int?
 }

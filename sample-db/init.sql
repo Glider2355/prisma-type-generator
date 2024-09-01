@@ -6,3 +6,10 @@ CREATE TABLE Users (
   dateOfBirth date COMMENT '生年月日',
   PRIMARY KEY (userId)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='ユーザテーブル';
+
+
+CREATE TABLE user_relations (
+  id BIGINT,
+  userId INT,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='ユーザ関連テーブル';
